@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cutechess", "C:/ZDev/OpenChess/projects/lib\cutechess.vcxproj", "{DE6891CE-CC1F-3F89-AA11-9404803A00B4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cutechess", "C:/ZDev/OpenChess/projects/gui\cutechess.vcxproj", "{B15BD38A-3F1F-3843-AEE2-AD3B6CEDD667}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DE6891CE-CC1F-3F89-AA11-9404803A00B4} = {DE6891CE-CC1F-3F89-AA11-9404803A00B4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE6891CE-CC1F-3F89-AA11-9404803A00B4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DE6891CE-CC1F-3F89-AA11-9404803A00B4}.Debug|Win32.Build.0 = Debug|Win32
+		{DE6891CE-CC1F-3F89-AA11-9404803A00B4}.Release|Win32.ActiveCfg = Release|Win32
+		{DE6891CE-CC1F-3F89-AA11-9404803A00B4}.Release|Win32.Build.0 = Release|Win32
+		{B15BD38A-3F1F-3843-AEE2-AD3B6CEDD667}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B15BD38A-3F1F-3843-AEE2-AD3B6CEDD667}.Debug|Win32.Build.0 = Debug|Win32
+		{B15BD38A-3F1F-3843-AEE2-AD3B6CEDD667}.Release|Win32.ActiveCfg = Release|Win32
+		{B15BD38A-3F1F-3843-AEE2-AD3B6CEDD667}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

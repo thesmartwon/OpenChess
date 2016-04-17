@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DE6891CE-CC1F-3F89-AA11-9404803A00B4}</ProjectGuid>
+    <RootNamespace>cutechess</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <ProjectName>lib</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>.obj\</IntermediateDirectory>
+    <PrimaryOutput>cutechess</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>.obj\</IntermediateDirectory>
+    <PrimaryOutput>cutechess</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cutechess</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Platform)_$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)build\$(Platform)_$(Configuration)\$(ProjectName)\int\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cutechess</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src;components\json\src;3rdparty\gtb\src;..\..\..\..\Dev\Qt\5.6\msvc2015\include;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore;.moc;..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;LIB_EXPORT=;Z_PREFIX;NDEBUG;QT_NO_DEBUG;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\cutechess.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;LIB_EXPORT=;Z_PREFIX;NDEBUG;QT_NO_DEBUG;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src;components\json\src;3rdparty\gtb\src;..\..\..\..\Dev\Qt\5.6\msvc2015\include;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore;.moc;..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015;$(QTDIR)\include\QtCore;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;LIB_EXPORT=;Z_PREFIX;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(OutDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\cutechess.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;LIB_EXPORT=;Z_PREFIX;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include=".moc\moc_chessengine.cpp" />
+    <ClCompile Include=".moc\moc_chessgame.cpp" />
+    <ClCompile Include=".moc\moc_chessplayer.cpp" />
+    <ClCompile Include=".moc\moc_enginemanager.cpp" />
+    <ClCompile Include=".moc\moc_engineprocess_win.cpp" />
+    <ClCompile Include=".moc\moc_gamemanager.cpp" />
+    <ClCompile Include=".moc\moc_gauntlettournament.cpp" />
+    <ClCompile Include=".moc\moc_humanplayer.cpp" />
+    <ClCompile Include=".moc\moc_knockouttournament.cpp" />
+    <ClCompile Include=".moc\moc_pipereader_win.cpp" />
+    <ClCompile Include=".moc\moc_roundrobintournament.cpp" />
+    <ClCompile Include=".moc\moc_tournament.cpp" />
+    <ClCompile Include=".moc\moc_uciengine.cpp" />
+    <ClCompile Include=".moc\moc_xboardengine.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\Alloc.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\Bra86.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\LzFind.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\Lzma86Dec.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\Lzma86Enc.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\LzmaDec.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\lzma\LzmaEnc.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\adler32.c" />
+    <ClCompile Include="GeneratedFiles\qrc_eco.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\board\atomicboard.cpp" />
+    <ClCompile Include="src\board\board.cpp" />
+    <ClCompile Include="src\board\boardfactory.cpp" />
+    <ClCompile Include="src\board\boardtransition.cpp" />
+    <ClCompile Include="src\board\capablancaboard.cpp" />
+    <ClCompile Include="src\board\caparandomboard.cpp" />
+    <ClCompile Include="src\chessengine.cpp" />
+    <ClCompile Include="src\chessgame.cpp" />
+    <ClCompile Include="src\chessplayer.cpp" />
+    <ClCompile Include="src\board\crazyhouseboard.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\crc32.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\deflate.c" />
+    <ClCompile Include="src\econode.cpp" />
+    <ClCompile Include="src\elo.cpp" />
+    <ClCompile Include="src\enginebuilder.cpp" />
+    <ClCompile Include="src\enginebuttonoption.cpp" />
+    <ClCompile Include="src\enginecheckoption.cpp" />
+    <ClCompile Include="src\enginecombooption.cpp" />
+    <ClCompile Include="src\engineconfiguration.cpp" />
+    <ClCompile Include="src\enginefactory.cpp" />
+    <ClCompile Include="src\enginemanager.cpp" />
+    <ClCompile Include="src\engineoption.cpp" />
+    <ClCompile Include="src\engineoptionfactory.cpp" />
+    <ClCompile Include="src\engineprocess_win.cpp" />
+    <ClCompile Include="src\enginespinoption.cpp" />
+    <ClCompile Include="src\enginetextoption.cpp" />
+    <ClCompile Include="src\epdrecord.cpp" />
+    <ClCompile Include="src\board\frcboard.cpp" />
+    <ClCompile Include="src\gameadjudicator.cpp" />
+    <ClCompile Include="src\gamemanager.cpp" />
+    <ClCompile Include="src\gauntlettournament.cpp" />
+    <ClCompile Include="src\board\gaviotatablebase.cpp" />
+    <ClCompile Include="src\board\genericmove.cpp" />
+    <ClCompile Include="src\board\gothicboard.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\gtb-att.c" />
+    <ClCompile Include="3rdparty\gtb\src\gtb-dec.c" />
+    <ClCompile Include="3rdparty\gtb\src\gtb-probe.c" />
+    <ClCompile Include="src\humanbuilder.cpp" />
+    <ClCompile Include="src\humanplayer.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\huffman\hzip.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\infback.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\inffast.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\inflate.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\inftrees.c" />
+    <ClCompile Include="components\json\src\jsonparser.cpp" />
+    <ClCompile Include="components\json\src\jsonserializer.cpp" />
+    <ClCompile Include="src\knockouttournament.cpp" />
+    <ClCompile Include="src\board\losersboard.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\liblzf\lzf_c.c" />
+    <ClCompile Include="3rdparty\gtb\src\compression\liblzf\lzf_d.c" />
+    <ClCompile Include="src\mersenne.cpp" />
+    <ClCompile Include="src\moveevaluation.cpp" />
+    <ClCompile Include="src\openingbook.cpp" />
+    <ClCompile Include="src\openingsuite.cpp" />
+    <ClCompile Include="src\pgngame.cpp" />
+    <ClCompile Include="src\pgngameentry.cpp" />
+    <ClCompile Include="src\pgngamefilter.cpp" />
+    <ClCompile Include="src\pgnstream.cpp" />
+    <ClCompile Include="src\pipereader_win.cpp" />
+    <ClCompile Include="src\playerbuilder.cpp" />
+    <ClCompile Include="src\polyglotbook.cpp" />
+    <ClCompile Include="src\board\result.cpp" />
+    <ClCompile Include="src\roundrobintournament.cpp" />
+    <ClCompile Include="src\board\side.cpp" />
+    <ClCompile Include="src\sprt.cpp" />
+    <ClCompile Include="src\board\square.cpp" />
+    <ClCompile Include="src\board\standardboard.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\sysport\sysport.c" />
+    <ClCompile Include="src\timecontrol.cpp" />
+    <ClCompile Include="src\tournament.cpp" />
+    <ClCompile Include="src\tournamentfactory.cpp" />
+    <ClCompile Include="src\tournamentpair.cpp" />
+    <ClCompile Include="src\tournamentplayer.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\trees.c" />
+    <ClCompile Include="src\uciengine.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\uncompr.c" />
+    <ClCompile Include="src\board\westernboard.cpp" />
+    <ClCompile Include="src\board\westernzobrist.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\wrap.c" />
+    <ClCompile Include="src\xboardengine.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\zcompress.c" />
+    <ClCompile Include="src\board\zobrist.cpp" />
+    <ClCompile Include="3rdparty\gtb\src\compression\zlib\zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\Alloc.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\Bra.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\LzFind.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\LzFindMt.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\LzHash.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\Lzma86Dec.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\Lzma86Enc.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\LzmaDec.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\LzmaEnc.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\lzma\Types.h" />
+    <ClInclude Include="src\board\atomicboard.h" />
+    <ClInclude Include="src\board\board.h" />
+    <ClInclude Include="src\board\boardfactory.h" />
+    <ClInclude Include="src\board\boardtransition.h" />
+    <ClInclude Include="src\board\capablancaboard.h" />
+    <ClInclude Include="src\board\caparandomboard.h" />
+    <CustomBuild Include="src\chessengine.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing chessengine.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing chessengine.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\chessgame.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing chessgame.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing chessgame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\chessplayer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing chessplayer.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing chessplayer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\classregistry.h" />
+    <ClInclude Include="src\board\crazyhouseboard.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\crc32.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\deflate.h" />
+    <ClInclude Include="src\econode.h" />
+    <ClInclude Include="src\elo.h" />
+    <ClInclude Include="src\enginebuilder.h" />
+    <ClInclude Include="src\enginebuttonoption.h" />
+    <ClInclude Include="src\enginecheckoption.h" />
+    <ClInclude Include="src\enginecombooption.h" />
+    <ClInclude Include="src\engineconfiguration.h" />
+    <ClInclude Include="src\enginefactory.h" />
+    <CustomBuild Include="src\enginemanager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing enginemanager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing enginemanager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\engineoption.h" />
+    <ClInclude Include="src\engineoptionfactory.h" />
+    <CustomBuild Include="src\engineprocess_win.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing engineprocess_win.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing engineprocess_win.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\enginespinoption.h" />
+    <ClInclude Include="src\enginetextoption.h" />
+    <ClInclude Include="src\epdrecord.h" />
+    <ClInclude Include="src\board\frcboard.h" />
+    <ClInclude Include="src\gameadjudicator.h" />
+    <CustomBuild Include="src\gamemanager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing gamemanager.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing gamemanager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gauntlettournament.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing gauntlettournament.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing gauntlettournament.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\board\gaviotatablebase.h" />
+    <ClInclude Include="src\board\genericmove.h" />
+    <ClInclude Include="src\board\gothicboard.h" />
+    <ClInclude Include="3rdparty\gtb\src\gtb-att.h" />
+    <ClInclude Include="3rdparty\gtb\src\gtb-dec.h" />
+    <ClInclude Include="3rdparty\gtb\src\gtb-probe.h" />
+    <ClInclude Include="3rdparty\gtb\src\gtb-types.h" />
+    <ClInclude Include="src\humanbuilder.h" />
+    <CustomBuild Include="src\humanplayer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing humanplayer.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing humanplayer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="3rdparty\gtb\src\compression\huffman\hzip.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\inffast.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\inffixed.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\inflate.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\inftrees.h" />
+    <ClInclude Include="components\json\src\jsonparser.h" />
+    <ClInclude Include="components\json\src\jsonserializer.h" />
+    <CustomBuild Include="src\knockouttournament.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing knockouttournament.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing knockouttournament.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\board\losersboard.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\liblzf\lzf.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\liblzf\lzfP.h" />
+    <ClInclude Include="src\mersenne.h" />
+    <ClInclude Include="src\board\move.h" />
+    <ClInclude Include="src\moveevaluation.h" />
+    <ClInclude Include="src\openingbook.h" />
+    <ClInclude Include="src\openingsuite.h" />
+    <ClInclude Include="src\pgngame.h" />
+    <ClInclude Include="src\pgngameentry.h" />
+    <ClInclude Include="src\pgngamefilter.h" />
+    <ClInclude Include="src\pgnstream.h" />
+    <ClInclude Include="src\board\piece.h" />
+    <CustomBuild Include="src\pipereader_win.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing pipereader_win.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing pipereader_win.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\playerbuilder.h" />
+    <ClInclude Include="src\polyglotbook.h" />
+    <ClInclude Include="src\board\result.h" />
+    <CustomBuild Include="src\roundrobintournament.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing roundrobintournament.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing roundrobintournament.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\board\side.h" />
+    <ClInclude Include="src\sprt.h" />
+    <ClInclude Include="src\board\square.h" />
+    <ClInclude Include="src\board\standardboard.h" />
+    <ClInclude Include="3rdparty\gtb\src\sysport\sysport.h" />
+    <ClInclude Include="src\timecontrol.h" />
+    <CustomBuild Include="src\tournament.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing tournament.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing tournament.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\tournamentfactory.h" />
+    <ClInclude Include="src\tournamentpair.h" />
+    <ClInclude Include="src\tournamentplayer.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\trees.h" />
+    <CustomBuild Include="src\uciengine.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing uciengine.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing uciengine.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\board\westernboard.h" />
+    <ClInclude Include="src\board\westernzobrist.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\wrap.h" />
+    <CustomBuild Include="src\xboardengine.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing xboardengine.h...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\.moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing xboardengine.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\zconf.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\zconf.in.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\zlib.h" />
+    <ClInclude Include="src\board\zobrist.h" />
+    <ClInclude Include="3rdparty\gtb\src\compression\zlib\zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include=".moc\gamemanager.moc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;.\src\gamemanager.cpp</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing gamemanager.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\.moc\%(Filename).moc</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "src\gamemanager.cpp" -o ".\.moc\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;.\src\gamemanager.cpp</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing gamemanager.cpp...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\.moc\%(Filename).moc</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "src\gamemanager.cpp" -o ".\.moc\%(Filename).moc"  -D_WINDOWS -DUNICODE -DWIN32 -DLIB_EXPORT= -DZ_PREFIX -DNDEBUG -DQT_NO_DEBUG -DQT_CORE_LIB  "-I." "-I.\src" "-I.\components\json\src" "-I.\3rdparty\gtb\src" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore" "-I.\.moc" "-I.\..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015" "-I$(QTDIR)\include\QtCore"</Command>
+    </CustomBuild>
+    <None Include="res\eco\eco.bin">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <CustomBuild Include="res\eco\eco.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\res\eco\eco.bin;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath);.\res\eco\eco.bin;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="Qt 5.6 msvc2015" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

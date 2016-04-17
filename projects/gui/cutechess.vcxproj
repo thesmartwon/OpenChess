@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B15BD38A-3F1F-3843-AEE2-AD3B6CEDD667}</ProjectGuid>
+    <RootNamespace>cutechess</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>.obj\</IntermediateDirectory>
+    <PrimaryOutput>cutechess</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <PlatformToolSet>v140</PlatformToolSet>
+    <OutputDirectory>.\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>.obj\</IntermediateDirectory>
+    <PrimaryOutput>cutechess</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.obj\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cutechess</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.obj\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cutechess</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\lib\src;3rdparty\modeltest;..\..\..\..\Dev\Qt\5.6\msvc2015\include;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtSvg;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtWidgets;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtGui;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtANGLE;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtConcurrent;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtTest;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore;.moc;.;..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>.obj\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;LIB_EXPORT=;CUTECHESS_VERSION=&quot;unknown&quot;;QT_NO_DEBUG;QT_SVG_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CONCURRENT_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot;;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cutechess.lib;$(QTDIR)\lib\Qt5Svg.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Concurrent.lib;$(QTDIR)\lib\Qt5Test.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\ZDev\OpenChess\projects\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\cutechess.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;LIB_EXPORT=;CUTECHESS_VERSION=\&quot;unknown\&quot;;QT_NO_DEBUG;QT_SVG_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CONCURRENT_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\lib\src;3rdparty\modeltest;..\..\..\..\Dev\Qt\5.6\msvc2015\include;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtSvg;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtWidgets;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtGui;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtANGLE;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtConcurrent;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtTest;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore;.moc;.;..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>.obj\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;LIB_EXPORT=;CUTECHESS_VERSION=&quot;unknown&quot;;QT_SVG_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CONCURRENT_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cutechess.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Concurrentd.lib;$(QTDIR)\lib\Qt5Testd.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\ZDev\OpenChess\projects\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\cutechess.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;LIB_EXPORT=;CUTECHESS_VERSION=\&quot;unknown\&quot;;QT_SVG_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CONCURRENT_LIB;QT_TESTLIB_LIB;QT_CORE_LIB;QT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot;;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\autoverticalscroller.cpp" />
+    <ClCompile Include="src\boardview\boardscene.cpp" />
+    <ClCompile Include="src\boardview\boardview.cpp" />
+    <ClCompile Include="src\chessclock.cpp" />
+    <ClCompile Include="src\cutechessapp.cpp" />
+    <ClCompile Include="src\engineconfigproxymodel.cpp" />
+    <ClCompile Include="src\engineconfigurationdlg.cpp" />
+    <ClCompile Include="src\engineconfigurationmodel.cpp" />
+    <ClCompile Include="src\enginemanagementdlg.cpp" />
+    <ClCompile Include="src\engineoptiondelegate.cpp" />
+    <ClCompile Include="src\engineoptionmodel.cpp" />
+    <ClCompile Include="src\engineselectiondlg.cpp" />
+    <ClCompile Include="src\gamedatabasedlg.cpp" />
+    <ClCompile Include="src\gamedatabasemanager.cpp" />
+    <ClCompile Include="src\gamedatabasesearchdlg.cpp" />
+    <ClCompile Include="src\gameviewer.cpp" />
+    <ClCompile Include="src\gamewall.cpp" />
+    <ClCompile Include="src\boardview\graphicsboard.cpp" />
+    <ClCompile Include="src\boardview\graphicspiece.cpp" />
+    <ClCompile Include="src\boardview\graphicspiecereserve.cpp" />
+    <ClCompile Include="src\importprogressdlg.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mainwindow.cpp" />
+    <ClCompile Include="3rdparty\modeltest\modeltest.cpp" />
+    <ClCompile Include="src\movecommenttoken.cpp" />
+    <ClCompile Include="src\movelist.cpp" />
+    <ClCompile Include="src\movenumbertoken.cpp" />
+    <ClCompile Include="src\movetoken.cpp" />
+    <ClCompile Include="src\newgamedlg.cpp" />
+    <ClCompile Include="src\newtournamentdialog.cpp" />
+    <ClCompile Include="src\pathlineedit.cpp" />
+    <ClCompile Include="src\pgndatabase.cpp" />
+    <ClCompile Include="src\pgndatabasemodel.cpp" />
+    <ClCompile Include="src\pgngameentrymodel.cpp" />
+    <ClCompile Include="src\pgnimporter.cpp" />
+    <ClCompile Include="src\pgntagsmodel.cpp" />
+    <ClCompile Include="src\pgntoken.cpp" />
+    <ClCompile Include="src\boardview\piecechooser.cpp" />
+    <ClCompile Include="src\plaintextlog.cpp" />
+    <ClCompile Include="src\stringvalidator.cpp" />
+    <ClCompile Include="src\threadedtask.cpp" />
+    <ClCompile Include="src\tilelayout.cpp" />
+    <ClCompile Include="src\timecontroldlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\autoverticalscroller.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\autoverticalscroller.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\autoverticalscroller.h -o .moc\moc_autoverticalscroller.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/autoverticalscroller.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_autoverticalscroller.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\autoverticalscroller.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\autoverticalscroller.h -o .moc\moc_autoverticalscroller.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/autoverticalscroller.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_autoverticalscroller.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\boardview\boardscene.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\boardview\boardscene.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\boardscene.h -o .moc\moc_boardscene.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/boardview/boardscene.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_boardscene.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\boardview\boardscene.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\boardscene.h -o .moc\moc_boardscene.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/boardview/boardscene.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_boardscene.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\boardview\boardview.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\boardview\boardview.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\boardview.h -o .moc\moc_boardview.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/boardview/boardview.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_boardview.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\boardview\boardview.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\boardview.h -o .moc\moc_boardview.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/boardview/boardview.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_boardview.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\chessclock.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\chessclock.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\chessclock.h -o .moc\moc_chessclock.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/chessclock.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_chessclock.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\chessclock.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\chessclock.h -o .moc\moc_chessclock.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/chessclock.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_chessclock.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\cutechessapp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\cutechessapp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\cutechessapp.h -o .moc\moc_cutechessapp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/cutechessapp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_cutechessapp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\cutechessapp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\cutechessapp.h -o .moc\moc_cutechessapp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/cutechessapp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_cutechessapp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\engineconfigproxymodel.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\engineconfigproxymodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineconfigproxymodel.h -o .moc\moc_engineconfigproxymodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/engineconfigproxymodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_engineconfigproxymodel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\engineconfigproxymodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineconfigproxymodel.h -o .moc\moc_engineconfigproxymodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/engineconfigproxymodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_engineconfigproxymodel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\engineconfigurationdlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\engineconfigurationdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineconfigurationdlg.h -o .moc\moc_engineconfigurationdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/engineconfigurationdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_engineconfigurationdlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\engineconfigurationdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineconfigurationdlg.h -o .moc\moc_engineconfigurationdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/engineconfigurationdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_engineconfigurationdlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\engineconfigurationmodel.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\engineconfigurationmodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineconfigurationmodel.h -o .moc\moc_engineconfigurationmodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/engineconfigurationmodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_engineconfigurationmodel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\engineconfigurationmodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineconfigurationmodel.h -o .moc\moc_engineconfigurationmodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/engineconfigurationmodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_engineconfigurationmodel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\enginemanagementdlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\enginemanagementdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\enginemanagementdlg.h -o .moc\moc_enginemanagementdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/enginemanagementdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_enginemanagementdlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\enginemanagementdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\enginemanagementdlg.h -o .moc\moc_enginemanagementdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/enginemanagementdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_enginemanagementdlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\engineoptiondelegate.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\engineoptiondelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineoptiondelegate.h -o .moc\moc_engineoptiondelegate.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/engineoptiondelegate.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_engineoptiondelegate.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\engineoptiondelegate.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineoptiondelegate.h -o .moc\moc_engineoptiondelegate.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/engineoptiondelegate.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_engineoptiondelegate.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\engineoptionmodel.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\engineoptionmodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineoptionmodel.h -o .moc\moc_engineoptionmodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/engineoptionmodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_engineoptionmodel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\engineoptionmodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineoptionmodel.h -o .moc\moc_engineoptionmodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/engineoptionmodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_engineoptionmodel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\engineselectiondlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\engineselectiondlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineselectiondlg.h -o .moc\moc_engineselectiondlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/engineselectiondlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_engineselectiondlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\engineselectiondlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\engineselectiondlg.h -o .moc\moc_engineselectiondlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/engineselectiondlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_engineselectiondlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gamedatabasedlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\gamedatabasedlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasedlg.h -o .moc\moc_gamedatabasedlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/gamedatabasedlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_gamedatabasedlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\gamedatabasedlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasedlg.h -o .moc\moc_gamedatabasedlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/gamedatabasedlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_gamedatabasedlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gamedatabasemanager.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\gamedatabasemanager.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasemanager.h -o .moc\moc_gamedatabasemanager.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/gamedatabasemanager.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_gamedatabasemanager.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\gamedatabasemanager.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasemanager.h -o .moc\moc_gamedatabasemanager.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/gamedatabasemanager.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_gamedatabasemanager.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gamedatabasesearchdlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\gamedatabasesearchdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasesearchdlg.h -o .moc\moc_gamedatabasesearchdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/gamedatabasesearchdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_gamedatabasesearchdlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\gamedatabasesearchdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasesearchdlg.h -o .moc\moc_gamedatabasesearchdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/gamedatabasesearchdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_gamedatabasesearchdlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gameviewer.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\gameviewer.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gameviewer.h -o .moc\moc_gameviewer.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/gameviewer.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_gameviewer.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\gameviewer.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gameviewer.h -o .moc\moc_gameviewer.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/gameviewer.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_gameviewer.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gamewall.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\gamewall.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamewall.h -o .moc\moc_gamewall.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/gamewall.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_gamewall.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\gamewall.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamewall.h -o .moc\moc_gamewall.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/gamewall.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_gamewall.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\boardview\graphicsboard.h" />
+    <CustomBuild Include="src\boardview\graphicspiece.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\boardview\graphicspiece.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\graphicspiece.h -o .moc\moc_graphicspiece.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/boardview/graphicspiece.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_graphicspiece.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\boardview\graphicspiece.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\graphicspiece.h -o .moc\moc_graphicspiece.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/boardview/graphicspiece.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_graphicspiece.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\boardview\graphicspiecereserve.h" />
+    <CustomBuild Include="src\importprogressdlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\importprogressdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\importprogressdlg.h -o .moc\moc_importprogressdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/importprogressdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_importprogressdlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\importprogressdlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\importprogressdlg.h -o .moc\moc_importprogressdlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/importprogressdlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_importprogressdlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\mainwindow.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\mainwindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\mainwindow.h -o .moc\moc_mainwindow.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/mainwindow.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_mainwindow.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\mainwindow.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\mainwindow.h -o .moc\moc_mainwindow.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/mainwindow.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_mainwindow.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="3rdparty\modeltest\modeltest.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">3rdparty\modeltest\modeltest.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore 3rdparty\modeltest\modeltest.h -o .moc\moc_modeltest.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC 3rdparty/modeltest/modeltest.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_modeltest.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">3rdparty\modeltest\modeltest.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore 3rdparty\modeltest\modeltest.h -o .moc\moc_modeltest.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC 3rdparty/modeltest/modeltest.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_modeltest.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\movecommenttoken.h" />
+    <CustomBuild Include="src\movelist.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\movelist.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\movelist.h -o .moc\moc_movelist.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/movelist.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_movelist.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\movelist.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\movelist.h -o .moc\moc_movelist.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/movelist.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_movelist.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\movenumbertoken.h" />
+    <ClInclude Include="src\movetoken.h" />
+    <CustomBuild Include="src\newgamedlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\newgamedlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\newgamedlg.h -o .moc\moc_newgamedlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/newgamedlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_newgamedlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\newgamedlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\newgamedlg.h -o .moc\moc_newgamedlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/newgamedlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_newgamedlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\newtournamentdialog.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\newtournamentdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\newtournamentdialog.h -o .moc\moc_newtournamentdialog.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/newtournamentdialog.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_newtournamentdialog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\newtournamentdialog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\newtournamentdialog.h -o .moc\moc_newtournamentdialog.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/newtournamentdialog.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_newtournamentdialog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\pathlineedit.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\pathlineedit.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pathlineedit.h -o .moc\moc_pathlineedit.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/pathlineedit.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_pathlineedit.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\pathlineedit.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pathlineedit.h -o .moc\moc_pathlineedit.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/pathlineedit.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_pathlineedit.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\pgndatabase.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\pgndatabase.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgndatabase.h -o .moc\moc_pgndatabase.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/pgndatabase.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_pgndatabase.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\pgndatabase.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgndatabase.h -o .moc\moc_pgndatabase.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/pgndatabase.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_pgndatabase.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\pgndatabasemodel.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\pgndatabasemodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgndatabasemodel.h -o .moc\moc_pgndatabasemodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/pgndatabasemodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_pgndatabasemodel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\pgndatabasemodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgndatabasemodel.h -o .moc\moc_pgndatabasemodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/pgndatabasemodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_pgndatabasemodel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\pgngameentrymodel.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\pgngameentrymodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgngameentrymodel.h -o .moc\moc_pgngameentrymodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/pgngameentrymodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_pgngameentrymodel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\pgngameentrymodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgngameentrymodel.h -o .moc\moc_pgngameentrymodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/pgngameentrymodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_pgngameentrymodel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\pgnimporter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\pgnimporter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgnimporter.h -o .moc\moc_pgnimporter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/pgnimporter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_pgnimporter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\pgnimporter.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgnimporter.h -o .moc\moc_pgnimporter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/pgnimporter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_pgnimporter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\pgntagsmodel.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\pgntagsmodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgntagsmodel.h -o .moc\moc_pgntagsmodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/pgntagsmodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_pgntagsmodel.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\pgntagsmodel.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\pgntagsmodel.h -o .moc\moc_pgntagsmodel.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/pgntagsmodel.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_pgntagsmodel.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\pgntoken.h" />
+    <CustomBuild Include="src\boardview\piecechooser.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\boardview\piecechooser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\piecechooser.h -o .moc\moc_piecechooser.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/boardview/piecechooser.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_piecechooser.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\boardview\piecechooser.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\boardview\piecechooser.h -o .moc\moc_piecechooser.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/boardview/piecechooser.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_piecechooser.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\plaintextlog.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\plaintextlog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\plaintextlog.h -o .moc\moc_plaintextlog.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/plaintextlog.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_plaintextlog.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\plaintextlog.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\plaintextlog.h -o .moc\moc_plaintextlog.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/plaintextlog.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_plaintextlog.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\stringvalidator.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\stringvalidator.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\stringvalidator.h -o .moc\moc_stringvalidator.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/stringvalidator.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_stringvalidator.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\stringvalidator.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\stringvalidator.h -o .moc\moc_stringvalidator.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/stringvalidator.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_stringvalidator.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\threadedtask.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\threadedtask.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\threadedtask.h -o .moc\moc_threadedtask.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/threadedtask.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_threadedtask.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\threadedtask.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\threadedtask.h -o .moc\moc_threadedtask.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/threadedtask.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_threadedtask.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\tilelayout.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\tilelayout.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\tilelayout.h -o .moc\moc_tilelayout.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/tilelayout.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_tilelayout.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\tilelayout.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\tilelayout.h -o .moc\moc_tilelayout.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/tilelayout.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_tilelayout.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\timecontroldlg.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\timecontroldlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\timecontroldlg.h -o .moc\moc_timecontroldlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/timecontroldlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\moc_timecontroldlg.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\timecontroldlg.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\timecontroldlg.h -o .moc\moc_timecontroldlg.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/timecontroldlg.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\moc_timecontroldlg.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include=".moc\gamedatabasedlg.moc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">src\gamedatabasedlg.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasedlg.cpp -o .moc\gamedatabasedlg.moc</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC src/gamedatabasedlg.cpp</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.moc\gamedatabasedlg.moc;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">src\gamedatabasedlg.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DLIB_EXPORT= -DCUTECHESS_VERSION=\&quot;unknown\&quot; -DQT_SVG_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CONCURRENT_LIB -DQT_TESTLIB_LIB -DQT_CORE_LIB -DQT_TESTCASE_BUILDDIR=&quot;C:/ZDev/OpenChess/projects/gui&quot; -D_MSC_VER=1900 -D_WIN32 -IC:/Dev/Qt/5.6/msvc2015/mkspecs/win32-msvc2015 -IC:/ZDev/OpenChess/projects/gui -IC:/ZDev/OpenChess/projects/lib/src -IC:/ZDev/OpenChess/projects/gui/3rdparty/modeltest -IC:/Dev/Qt/5.6/msvc2015/include -IC:/Dev/Qt/5.6/msvc2015/include/QtSvg -IC:/Dev/Qt/5.6/msvc2015/include/QtWidgets -IC:/Dev/Qt/5.6/msvc2015/include/QtGui -IC:/Dev/Qt/5.6/msvc2015/include/QtANGLE -IC:/Dev/Qt/5.6/msvc2015/include/QtConcurrent -IC:/Dev/Qt/5.6/msvc2015/include/QtTest -IC:/Dev/Qt/5.6/msvc2015/include/QtCore src\gamedatabasedlg.cpp -o .moc\gamedatabasedlg.moc</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC src/gamedatabasedlg.cpp</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.moc\gamedatabasedlg.moc;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClCompile Include=".moc\moc_autoverticalscroller.cpp" />
+    <ClCompile Include=".moc\moc_boardscene.cpp" />
+    <ClCompile Include=".moc\moc_boardview.cpp" />
+    <ClCompile Include=".moc\moc_chessclock.cpp" />
+    <ClCompile Include=".moc\moc_cutechessapp.cpp" />
+    <ClCompile Include=".moc\moc_engineconfigproxymodel.cpp" />
+    <ClCompile Include=".moc\moc_engineconfigurationdlg.cpp" />
+    <ClCompile Include=".moc\moc_engineconfigurationmodel.cpp" />
+    <ClCompile Include=".moc\moc_enginemanagementdlg.cpp" />
+    <ClCompile Include=".moc\moc_engineoptiondelegate.cpp" />
+    <ClCompile Include=".moc\moc_engineoptionmodel.cpp" />
+    <ClCompile Include=".moc\moc_engineselectiondlg.cpp" />
+    <ClCompile Include=".moc\moc_gamedatabasedlg.cpp" />
+    <ClCompile Include=".moc\moc_gamedatabasemanager.cpp" />
+    <ClCompile Include=".moc\moc_gamedatabasesearchdlg.cpp" />
+    <ClCompile Include=".moc\moc_gameviewer.cpp" />
+    <ClCompile Include=".moc\moc_gamewall.cpp" />
+    <ClCompile Include=".moc\moc_graphicspiece.cpp" />
+    <ClCompile Include=".moc\moc_importprogressdlg.cpp" />
+    <ClCompile Include=".moc\moc_mainwindow.cpp" />
+    <ClCompile Include=".moc\moc_modeltest.cpp" />
+    <ClCompile Include=".moc\moc_movelist.cpp" />
+    <ClCompile Include=".moc\moc_newgamedlg.cpp" />
+    <ClCompile Include=".moc\moc_newtournamentdialog.cpp" />
+    <ClCompile Include=".moc\moc_pathlineedit.cpp" />
+    <ClCompile Include=".moc\moc_pgndatabase.cpp" />
+    <ClCompile Include=".moc\moc_pgndatabasemodel.cpp" />
+    <ClCompile Include=".moc\moc_pgngameentrymodel.cpp" />
+    <ClCompile Include=".moc\moc_pgnimporter.cpp" />
+    <ClCompile Include=".moc\moc_pgntagsmodel.cpp" />
+    <ClCompile Include=".moc\moc_piecechooser.cpp" />
+    <ClCompile Include=".moc\moc_plaintextlog.cpp" />
+    <ClCompile Include=".moc\moc_stringvalidator.cpp" />
+    <ClCompile Include=".moc\moc_threadedtask.cpp" />
+    <ClCompile Include=".moc\moc_tilelayout.cpp" />
+    <ClCompile Include=".moc\moc_timecontroldlg.cpp" />
+    <ClCompile Include=".rcc\qrc_chessboard.cpp" />
+    <ClCompile Include=".rcc\qrc_icons.cpp" />
+    <ClInclude Include="ui_engineconfigdlg.h" />
+    <ClInclude Include="ui_enginemanagementdlg.h" />
+    <ClInclude Include="ui_engineselectiondlg.h" />
+    <ClInclude Include="ui_gamedatabasedlg.h" />
+    <ClInclude Include="ui_gamedatabasesearchdlg.h" />
+    <ClInclude Include="ui_importprogressdlg.h" />
+    <ClInclude Include="ui_newgamedlg.h" />
+    <ClInclude Include="ui_newtournamentdlg.h" />
+    <ClInclude Include="ui_timecontroldlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ui\engineconfigdlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\engineconfigdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\engineconfigdlg.ui -o ui_engineconfigdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/engineconfigdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_engineconfigdlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\engineconfigdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\engineconfigdlg.ui -o ui_engineconfigdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/engineconfigdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_engineconfigdlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\enginemanagementdlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\enginemanagementdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\enginemanagementdlg.ui -o ui_enginemanagementdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/enginemanagementdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_enginemanagementdlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\enginemanagementdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\enginemanagementdlg.ui -o ui_enginemanagementdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/enginemanagementdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_enginemanagementdlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\engineselectiondlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\engineselectiondlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\engineselectiondlg.ui -o ui_engineselectiondlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/engineselectiondlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_engineselectiondlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\engineselectiondlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\engineselectiondlg.ui -o ui_engineselectiondlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/engineselectiondlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_engineselectiondlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\gamedatabasedlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\gamedatabasedlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\gamedatabasedlg.ui -o ui_gamedatabasedlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/gamedatabasedlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_gamedatabasedlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\gamedatabasedlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\gamedatabasedlg.ui -o ui_gamedatabasedlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/gamedatabasedlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_gamedatabasedlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\gamedatabasesearchdlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\gamedatabasesearchdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\gamedatabasesearchdlg.ui -o ui_gamedatabasesearchdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/gamedatabasesearchdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_gamedatabasesearchdlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\gamedatabasesearchdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\gamedatabasesearchdlg.ui -o ui_gamedatabasesearchdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/gamedatabasesearchdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_gamedatabasesearchdlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\importprogressdlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\importprogressdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\importprogressdlg.ui -o ui_importprogressdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/importprogressdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_importprogressdlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\importprogressdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\importprogressdlg.ui -o ui_importprogressdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/importprogressdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_importprogressdlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\newgamedlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\newgamedlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\newgamedlg.ui -o ui_newgamedlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/newgamedlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_newgamedlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\newgamedlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\newgamedlg.ui -o ui_newgamedlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/newgamedlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_newgamedlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\newtournamentdlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\newtournamentdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\newtournamentdlg.ui -o ui_newtournamentdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/newtournamentdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_newtournamentdlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\newtournamentdlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\newtournamentdlg.ui -o ui_newtournamentdlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/newtournamentdlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_newtournamentdlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ui\timecontroldlg.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui\timecontroldlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ui\timecontroldlg.ui -o ui_timecontroldlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ui/timecontroldlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ui_timecontroldlg.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui\timecontroldlg.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ui\timecontroldlg.ui -o ui_timecontroldlg.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ui/timecontroldlg.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ui_timecontroldlg.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\icons\toolbutton\add_16x16.png" />
+    <CustomBuild Include="res\chessboard\chessboard.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">res\chessboard\chessboard.qrc;res\chessboard\default.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name chessboard res\chessboard\chessboard.qrc -o .rcc\qrc_chessboard.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC res/chessboard/chessboard.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.rcc\qrc_chessboard.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">res\chessboard\chessboard.qrc;res\chessboard\default.svg;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name chessboard res\chessboard\chessboard.qrc -o .rcc\qrc_chessboard.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC res/chessboard/chessboard.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.rcc\qrc_chessboard.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\icons\toolbutton\configure_16x16.png" />
+    <None Include="res\icons\cutechess_128x128.png" />
+    <None Include="res\icons\cutechess_16x16.png" />
+    <None Include="res\icons\cutechess_24x24.png" />
+    <None Include="res\icons\cutechess_256x256.png" />
+    <None Include="res\icons\cutechess_32x32.png" />
+    <None Include="res\icons\cutechess_512x512.png" />
+    <None Include="res\icons\cutechess_64x64.png" />
+    <None Include="res\chessboard\default.svg" />
+    <None Include="res\icons\toolbutton\first_16x16.png" />
+    <CustomBuild Include="res\icons\icons.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">res\icons\icons.qrc;res\icons\cutechess_24x24.png;res\icons\cutechess_512x512.png;res\icons\cutechess_32x32.png;res\icons\cutechess_16x16.png;res\icons\cutechess_128x128.png;res\icons\cutechess_64x64.png;res\icons\cutechess_256x256.png;res\icons\toolbutton\next_16x16.png;res\icons\toolbutton\remove_16x16.png;res\icons\toolbutton\add_16x16.png;res\icons\toolbutton\first_16x16.png;res\icons\toolbutton\configure_16x16.png;res\icons\toolbutton\last_16x16.png;res\icons\toolbutton\previous_16x16.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name icons res\icons\icons.qrc -o .rcc\qrc_icons.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC res/icons/icons.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">.rcc\qrc_icons.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">res\icons\icons.qrc;res\icons\cutechess_24x24.png;res\icons\cutechess_512x512.png;res\icons\cutechess_32x32.png;res\icons\cutechess_16x16.png;res\icons\cutechess_128x128.png;res\icons\cutechess_64x64.png;res\icons\cutechess_256x256.png;res\icons\toolbutton\next_16x16.png;res\icons\toolbutton\remove_16x16.png;res\icons\toolbutton\add_16x16.png;res\icons\toolbutton\first_16x16.png;res\icons\toolbutton\configure_16x16.png;res\icons\toolbutton\last_16x16.png;res\icons\toolbutton\previous_16x16.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name icons res\icons\icons.qrc -o .rcc\qrc_icons.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC res/icons/icons.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">.rcc\qrc_icons.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="res\icons\toolbutton\last_16x16.png" />
+    <None Include="res\icons\toolbutton\next_16x16.png" />
+    <None Include="res\icons\toolbutton\previous_16x16.png" />
+    <None Include="res\icons\toolbutton\remove_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\icons\cutechess_win.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
