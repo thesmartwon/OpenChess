@@ -43,7 +43,7 @@ EngineConfigurationDialog::EngineConfigurationDialog(
 {
 	ui->setupUi(this);
 
-	new ModelTest(m_engineOptionModel, this);
+	// new ModelTest(m_engineOptionModel, this);
 
 	if (mode == EngineConfigurationDialog::AddEngine)
 		setWindowTitle(tr("Add Engine"));
