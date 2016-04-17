@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\lib\src;3rdparty\modeltest;..\..\..\..\Dev\Qt\5.6\msvc2015\include;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtSvg;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtWidgets;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtGui;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtANGLE;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtConcurrent;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtTest;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore;.moc;.;..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\lib\src;3rdparty\modeltest;..\..\..\..\Dev\Qt\5.6\msvc2015\include;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtSvg;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtWidgets;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtGui;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtANGLE;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtConcurrent;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtTest;..\..\..\..\Dev\Qt\5.6\msvc2015\include\QtCore;.moc;..\..\..\..\Dev\Qt\5.6\msvc2015\mkspecs\win32-msvc2015;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>.obj\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -119,7 +119,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>cutechess.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Concurrentd.lib;$(QTDIR)\lib\Qt5Testd.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\ZDev\OpenChess\projects\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)build\$(Platform)_$(Configuration)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
