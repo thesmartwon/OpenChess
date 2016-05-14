@@ -77,10 +77,16 @@ At the moment only scheme 4 compression is supported.
 .It Fl tournament Ar type
 Set the tournament type, where
 .Ar type
-is either
-.Cm round-robin
-(default) or
-.Cm gauntlet .
+is one of:
+.Pp
+.Bl -tag -width "XXXXXXXXXXXXX" -offset ident -compact
+.It round-robin
+Round-robin tournament (default)
+.It gauntlet
+First engine plays against the rest
+.It knockout
+Single-elimination tournament
+.El
 .It Fl event Ar arg
 Set the event name to
 .Ar arg .
@@ -156,6 +162,16 @@ is the number of the first opening that will be played.
 The minimum value for
 .Ar start
 is 1 (default).
+.It Fl bookmode Ar mode
+Set Polyglot book access mode, where
+.Ar mode
+is either
+.Cm ram
+(the whole book is loaded into RAM) or
+.Cm disk
+(the book is accessed directly on disk).
+The default mode is
+.Cm ram .
 .It Fl pgnout Ar file Bq Cm min
 Save the games to
 .Ar file
@@ -167,6 +183,10 @@ Restart crashed engines instead of stopping the game.
 .It Fl repeat
 Play each opening twice so that both players get to play it on both
 sides.
+.It Fl seeds Ar n
+Set the first
+.Ar n
+engines as seeds in the tournament. The default is 0.
 .It Fl site Ar arg
 Set the site / location to
 .Ar arg .

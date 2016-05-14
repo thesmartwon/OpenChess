@@ -51,14 +51,6 @@ Doxyfile
 *.kdevelop.pcs
 *.kdevses
 
-# files created by Visual Studio
-.vs/
-*.VC.db
-*.VC.opendb
-*.vcxproj.user
-build/
-GeneratedFiles/
-
 # files created by Qt Creator
 *.pro.user*
 qtc-gdbmacros/
@@ -76,6 +68,14 @@ qtc-gdbmacros/
 *.ilk
 *.pdb
 *.exp
+
+# files created by Visual Studio
+.vs/
+*.VC.db
+*.VC.opendb
+*.vcxproj.user
+build/
+GeneratedFiles/
 
 # object files
 *.o

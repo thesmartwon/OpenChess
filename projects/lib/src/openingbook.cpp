@@ -19,6 +19,7 @@
 #include <QString>
 #include <QFile>
 #include <QDataStream>
+#include <QtDebug>
 #include "pgngame.h"
 #include "pgnstream.h"
 #include "mersenne.h"
@@ -27,7 +28,11 @@
 QDataStream& operator>>(QDataStream& in, OpeningBook* book)
 {
 	while (in.status() == QDataStream::Ok)
-		book->readEntry(in);
+	{
+		quint64 key;
+		OpeningBook::Entry entry = book->readEntry(in, &key);
+		book->addEntry(entry, key);
+	}
 
 	return in;
 }
@@ -41,11 +46,31 @@ QDataStream& operator<<(QDataStream& out, const OpeningBook* book)
 	return out;
 }
 
+OpeningBook::OpeningBook(AccessMode mode)
+	: m_mode(mode)
+{
+}
+
+OpeningBook::~OpeningBook()
+{
+}
+
 bool OpeningBook::read(const QString& filename)
 {
+	m_filename = filename;
 	QFile file(filename);
 	if (!file.open(QIODevice::ReadOnly))
 		return false;
+
+	if ((file.size() % entrySize()) != 0)
+	{
+		qDebug("Invalid size for opening book %s",
+		       qPrintable(filename));
+		return false;
+	}
+
+	if (m_mode == Disk)
+		return true;
 
 	m_map.clear();
 	QDataStream in(&file);
@@ -135,14 +160,77 @@ int OpeningBook::import(PgnStream& in, int maxMoves)
 	return moveCount;
 }
 
+QList<OpeningBook::Entry> OpeningBook::entriesFromDisk(quint64 key) const
+{
+	QList<Entry> entries;
+	QFile file(m_filename);
+	if (!file.open(QIODevice::ReadOnly))
+	{
+		qDebug("Could not open book file %s", qPrintable(m_filename));
+		return entries;
+	}
+	QDataStream in(&file);
+
+	quint64 entryKey = 0;
+	qint64 step = entrySize();
+	qint64 n = file.size() / step;
+	qint64 first = 0;
+	qint64 last = n - 1;
+	qint64 middle = (first + last) / 2;
+
+	// Binary search
+	while (first <= last)
+	{
+		qint64 pos = middle * step;
+		file.seek(pos);
+		Entry entry = readEntry(in, &entryKey);
+		if (entryKey < key)
+			first = middle + 1;
+		else if (entryKey == key)
+		{
+			entries << entry;
+			for (qint64 i = pos - step; i >= 0; i -= step)
+			{
+				file.seek(i);
+				entry = readEntry(in, &entryKey);
+				if (entryKey != key)
+					break;
+				entries << entry;
+			}
+			qint64 maxPos = (n - 1) * step;
+			for (qint64 i = pos + step; i <= maxPos; i += step)
+			{
+				file.seek(i);
+				entry = readEntry(in, &entryKey);
+				if (entryKey != key)
+					break;
+				entries << entry;
+			}
+			return entries;
+		}
+		else
+			last = middle - 1;
+		middle = (first + last) / 2;
+	}
+
+	return entries;
+}
+
+QList<OpeningBook::Entry> OpeningBook::entries(quint64 key) const
+{
+	if (m_mode == Ram)
+		return m_map.values(key);
+	return entriesFromDisk(key);
+}
+
 Chess::GenericMove OpeningBook::move(quint64 key) const
 {
 	Chess::GenericMove move;
 	
 	// There can be multiple entries/moves with the same key.
 	// We need to find them all to choose the best one
-	QList<Entry> entries = m_map.values(key);
-	if (entries.size() == 0)
+	QList<Entry> entries = this->entries(key);
+	if (entries.isEmpty())
 		return move;
 	
 	// Calculate the total weight of all available moves
